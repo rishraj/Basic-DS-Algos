@@ -7,12 +7,13 @@ void sort(int values[], int n);
 int main(void)
 {
     printf("Enter the size of the array: ");
-    int n = get_int();
-    int values[n];                 //declaring the main array to be sorted
+    int n;
+    scanf("%i",&n);
+    int values[n+1];                 //declaring the main array to be sorted
     for(int i=0 ; i < n ; i++)            //inputting values in the array
     {
         printf("Value %d = ", i+1);
-        values[i] = get_int();
+        scanf("%i", &values[i]);
     }
     sort(values , n);                //calling sort function to sort the list
     printf(" Sorted Array : ");
@@ -20,10 +21,17 @@ int main(void)
     {
         printf("%d " , values[i]);
     }
+    printf("\n");
 }
+
+
 void sort(int values[], int n)
 {
-    int ar[65536] , c=0;             //arbitrarily choose the counting array of size 65,536.
+    int ar[65537] , c=0;            //arbitrarily choose the counting array of size 65,536.
+    for(int i=0 ; i < 65536 ; i++)
+    {
+        ar[i] = 0;
+    }
     for(int i=0 ; i < n ; i++)             //incrementing counting array elements according to the key elements of main array
     {
         ar[values[i]]++;
