@@ -7,13 +7,12 @@ void sort(int values[], int n);
 int main(void)
 {
     printf("Enter the size of the array: ");
-    int n;
-    scanf("%i",&n);
+    int n = get_int();
     int values[n+1];                 //declaring the main array to be sorted
     for(int i=0 ; i < n ; i++)            //inputting values in the array
     {
         printf("Value %d = ", i+1);
-        scanf("%i", &values[i]);
+        values[i] = get_int();
     }
     sort(values , n);                //calling sort function to sort the list
     printf(" Sorted Array : ");
