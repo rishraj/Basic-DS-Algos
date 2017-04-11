@@ -39,7 +39,7 @@ void sort(int values[], int n)
     {
         for(int j=0 ; j < ar[i] ; j++)   //loop in case there were repeated nos. in values array
         {
-            values[c] = i;           // substituting the arranged values accordingly(most probable line of cause of error)
+            values[c] = i;           // substituting the arranged values accordingly
             c++;
         }
     }
