@@ -51,7 +51,7 @@ int main()
 	}
 }*/
 
-//pre_fix_tour routine
+//----------pre_fix_tour routine---------------------------------
 void pre_fix_tour(struct node *x)
 {
 	if(x == NULL)
@@ -60,7 +60,7 @@ void pre_fix_tour(struct node *x)
 		visit(x);
 }
 
-//visit routine
+//-------------visit routine-------------------------------------
 void visit(struct node *x)
 {
 	if(x != NULL)
