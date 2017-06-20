@@ -25,6 +25,8 @@ void inorder_tree_walk(struct node *x);
 //root declaration
 struct node *root = NULL;
 
+//*************Red color is denoted by 1 and black color is denoted by 0 in this piece of code.**************************
+
 int main()
 {
 	int n;
